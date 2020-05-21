@@ -1,5 +1,5 @@
-const range = 100;
-const anwer = Math.ceil(Math.random()* range);
+const range = 300;
+const answer = Math.ceil(Math.random()* range);
 console.log(answer);
 
 const inputTag = document.getElementaryById("input");
@@ -9,6 +9,7 @@ const displayLife = document.getElementById("lifecnt");
 
 let life = 5;
 formBtn.onclick = (event) => {
+    event.preventDefault();
     life -= 1;
     displayLife.textContent = life;
     const userInput = Number(inputTag.value);
